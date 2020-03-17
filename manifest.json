@@ -2,7 +2,7 @@
   "name": "Youtube Playback Speed Controller",
   "version": "0.1",
   "description": "Provides a slider to control youtube's playback speed",
-  "permissions": ["declarativeContent"],
+  "permissions": ["declarativeContent", "activeTab"],
   "background": {
       "scripts": ["handler.js"],
       "persistent": false
