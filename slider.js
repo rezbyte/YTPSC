@@ -1,13 +1,13 @@
 var slider = document.getElementById("slider_Speed");
-var button = document.getElementById("button_Reset");
+var button = document.getElementsByName("button_Reset")[0];
 
 slider.oninput = function() {
   changeSpeed(this.value);
 }
 
-button.click = function() {
-  changeSpeed(0.1);
-  slider.value = 0.1;
+button.onclick = function() {
+  changeSpeed(1);
+  slider.value = 1;
 }
 
 function changeSpeed(desiredSpeed) {
