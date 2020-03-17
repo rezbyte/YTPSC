@@ -1,4 +1,3 @@
-console.log("slider.js called");
 var slider = document.getElementById("theSlider");
 
 slider.oninput = function() {
