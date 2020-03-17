@@ -1,7 +1,7 @@
 var slider = document.getElementById("theSlider");
-var currentLocation = window.location.href
+var currentLocation = window.location.href.toString();
 
-if (currentLocation.contains("youtube.com")) {
+if (currentLocation.includes("youtube.com")) {
   slider.disabled = false;
   slider.oninput = function() {
     changeSpeed(this.value);
