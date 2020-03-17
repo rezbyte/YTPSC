@@ -37,6 +37,6 @@ function displayCurrentSpeed() {
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
   chrome.tabs.executeScript(tabs[0].id,
     {code: 'document.getElementsByTagName("video")[0].playbackRate;'},
-    function(response) { slider.value = response[0]; console.log(response[0] + "," + currentSpeed);} );
+    function(response) { slider.value = response[0];});
   });
 }
