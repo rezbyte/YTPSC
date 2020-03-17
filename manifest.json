@@ -1,7 +1,7 @@
 {
   "name": "Youtube Playback Speed Controller",
   "version": "0.1",
-  "description": "Provides a slider to controller",
+  "description": "Provides a slider to control youtube's playback speed",
   "background": {
       "scripts": ["handler.js"],
       "persistent": false
