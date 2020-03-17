@@ -1,5 +1,4 @@
 var slider = document.getElementById("theSlider");
-var currentLocation = window.location.href.toString();
 
   slider.oninput = function() {
     changeSpeed(this.value);

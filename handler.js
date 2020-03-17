@@ -8,6 +8,6 @@ chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
           pageUrl: {hostEquals: 'youtube.com'},
         })
         ],
-            actions: [new chrome.declarativeContent.ShowPageAction()]
+          actions: [new chrome.declarativeContent.ShowPageAction()]
       }]);
 });
