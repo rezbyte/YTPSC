@@ -1,3 +1,12 @@
+/************************
+ Name: slider.js
+ Project: Youtube Playback Speed Controller
+ Purpose: Handle slider movement, and reset button
+ Author: rezbyte
+ Written: 18/03/2020
+ Last Changed: 18/03/2020
+ ************************/
+
 var slider = document.getElementById("slider_Speed");
 var button = document.getElementsByName("button_Reset")[0];
 
@@ -6,8 +15,7 @@ slider.oninput = function() {
 }
 
 button.onclick = function() {
-  changeSpeed(1);
-  slider.value = 1;
+  reset();
 }
 
 function changeSpeed(desiredSpeed) {
@@ -15,4 +23,9 @@ function changeSpeed(desiredSpeed) {
   chrome.tabs.executeScript(tabs[0].id,
     {code: 'document.getElementsByTagName("video")[0].playbackRate = "' + desiredSpeed + '";'});
   });
+}
+
+function reset() {
+  changeSpeed(1);
+  slider.value = 1;
 }
